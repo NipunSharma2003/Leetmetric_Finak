@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LeetMetric — Lite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>LM</span></div>
+        <div>
+          <div style="font-size:18px">LeetMetric <span style="opacity:.7;font-weight:600">Lite</span></div>
+          <div class="hint">Enter username → see stats</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="search">
+        <input id="username" type="text" placeholder="Enter LeetCode username" />
+        <button id="go">Fetch Stats</button>
+      </div>
+      <div id="err" class="error" role="alert"></div>
+
+      <div class="row">
+        <div class="grid" aria-live="polite">
+          <div class="stat" id="total">
+            <h3>Total Solved</h3>
+            <div class="val" data-value>—</div>
+          </div>
+          <div class="stat" id="easy">
+            <h3>Easy</h3>
+            <div class="val" data-value>—</div>
+          </div>
+          <div class="stat" id="medium">
+            <h3>Medium</h3>
+            <div class="val" data-value>—</div>
+          </div>
+          <div class="stat" id="hard">
+            <h3>Hard</h3>
+            <div class="val" data-value>—</div>
+          </div>
+        </div>
+        <div class="loading" id="loading"><span class="spinner"></span> Fetching…</div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> LeetMetric Lite</div>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
